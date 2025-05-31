@@ -38,3 +38,6 @@ jobs:
 
       - name: Push Docker image
         run: docker push pescel/ab3-simple-typescript:latest
+
+      - name: Echo Hello Welt
+        run: echo "Hallo Welt"
