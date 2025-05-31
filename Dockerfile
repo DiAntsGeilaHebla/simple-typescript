@@ -4,8 +4,8 @@ FROM node:18
 # Arbeitsverzeichnis erstellen
 WORKDIR /app
 
-# package.json und yarn.lock kopieren
-COPY package*.json yarn.lock ./
+# package.json, yarn.lock und eslint.config.mjs kopieren
+COPY package*.json yarn.lock eslint.config.mjs ./
 
 # Abhängigkeiten installieren
 RUN yarn install
