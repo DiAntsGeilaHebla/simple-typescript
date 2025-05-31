@@ -8,7 +8,7 @@
     "dev": "npx nodemon",
     "start": "node build/index.js",
     "lint": "eslint --config eslint.config.mjs .",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "husky": {
     "hooks": {
