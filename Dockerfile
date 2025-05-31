@@ -10,6 +10,9 @@ COPY package*.json yarn.lock eslint.config.mjs ./
 # Abhängigkeiten installieren
 RUN yarn install
 
+# Restliche App-Dateien kopieren (falls noch benötigt)
+COPY . .
+
 # Linting ausführen
 RUN yarn lint
 
@@ -18,9 +21,6 @@ RUN yarn test
 
 # TypeScript-Code bauen
 RUN yarn build
-
-# Restliche App-Dateien kopieren (falls noch benötigt)
-COPY . .
 
 # Startbefehl
 CMD ["node", "build/index.js"]
