@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   ci:
-    runs-on: self-hosted  # oder [self-hosted, linux, x64] falls du es gezielt willst
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
@@ -14,6 +14,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      - name: Install Yarn
+        run: npm install -g yarn
 
       - name: Install dependencies
         run: yarn install
