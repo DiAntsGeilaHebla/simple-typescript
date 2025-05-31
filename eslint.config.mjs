@@ -9,4 +9,7 @@ export default defineConfig([
   tseslint.configs.recommended,
   { files: ["**/*.json"], plugins: { json }, language: "json/json" },
   { files: ["**/*.jsonc"], plugins: { json }, language: "json/jsonc" },
+  {
+    ignores: [".vscode/**"],
+  },
 ]);
